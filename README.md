@@ -1,2 +1,4 @@
-# csd-340
-More school stuff
+#CSD 340 Web Development with HTML and CSS
+##Contributors
+##Professor Sue Sampson
+##Somsak Bouncharuene
