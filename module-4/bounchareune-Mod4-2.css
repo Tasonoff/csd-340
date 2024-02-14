@@ -1,0 +1,37 @@
+#container {
+    text-align: center;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+    gap: 20px; /* Space between grid items */
+}
+
+#image-gallery div {
+    border: 2px solid black; /* Add border to each div */
+    padding: 10px; /* Add some padding inside the divs */
+}
+
+h1 {
+    color: rgba(255, 0, 0, 0.8); /* Example red color */
+}
+
+h3 {
+    text-align: center;
+    color: rgba(0, 0, 255, 0.8); /* Example blue color */
+}
+
+figure {
+    text-align: center;
+    margin: auto; /* Ensures images are centered in their respective divs */
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(0, 128, 0, 0.8); /* Example green color */
+}
+
+}
