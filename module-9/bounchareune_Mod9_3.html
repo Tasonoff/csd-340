@@ -1,0 +1,67 @@
+<!-- Somsak Bounchareune: Assignment 9.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Four meta tags go here. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 9.3 for CSD 340">
+    <meta name="author" content="Somsak Bounchareune">
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="bounchareune_Mod2_2.css">
+
+    <title>CSD 340 Development with HTML and CSS</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        
+
+        <!-- Paragraphs -->
+        <!DOCTYPE html>
+<html>
+<head>
+    <title>Sam's Speech to Frodo</title>
+    <script>
+        // JavaScript variables holding string inputs for the span tags
+        var word1 = "share";
+        var word2 = "carry";
+        var word3 = "burden";
+        var word4 = "fire";
+
+        // Function to replace underscores with the variable values
+        function fillWord(spanId, word) {
+            document.getElementById(spanId).innerText = word;
+        }
+    </script>
+</head>
+<body>
+    <h2>Sam's Speech to Frodo at Mt. Doom</h2>
+    <p>"Frodo: 'I can't do this, Sam.'</p>
+    <p>Sam: 'I know. It's all wrong. By rights we shouldn't even be here. But we are. It's like in the great stories, Mr. Frodo. The ones that really mattered. Full of darkness and danger, they were. And sometimes you didn't want to know the end. Because how could the end be happy? How could the world go back to the way it was when so much bad had happened? But in the end, it’s only a passing thing, this shadow. Even darkness must pass. A new day will come. And when the sun shines it will shine out the clearer. Those were the stories that stayed with you. That meant something, even if you were too small to understand why. But I think, Mr. Frodo, I do understand. I know now. Folk in those stories had lots of chances of turning back, only they didn’t. They kept going. Because they were holding on to something.'</p>
+    <p>Frodo: 'What are we holding on to, Sam?'</p>
+    <p>Sam: 'That there’s some good in this world, Mr. Frodo... and it’s worth fighting for. I can’t <span id="word1">__________</span> it for you... but I can <span id="word2">__________</span> you.'</p>
+    <p>And with that, Sam lifted Frodo onto his back, determined to <span id="word3">__________</span> the <span id="word4">__________</span> together, as far as they could go.</p>
+    
+    <!-- Buttons to replace underscores -->
+    <button onclick="fillWord('word1', word1)">Reveal Word 1</button>
+    <button onclick="fillWord('word2', word2)">Reveal Word 2</button>
+    <button onclick="fillWord('word3', word3)">Reveal Word 3</button>
+    <button onclick="fillWord('word4', word4)">Reveal Word 4</button>
+</body>
+</html>
+
+
+        <!-- Horizontal line -->
+        <hr />
+
+        <!-- Address and link -->
+        <address>
+            <p><a href="https://www.bellevue.edu">Bellevue University</a></p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+    </div>
+</body>
+</html>
