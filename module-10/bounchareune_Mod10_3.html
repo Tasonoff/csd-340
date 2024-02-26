@@ -1,0 +1,41 @@
+<!-- Somsak Bounchareune: Assignment 10.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        .image-container img {
+            width: 300px; /* Adjust as needed */
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <div class="image-container">
+        <!-- Placeholder for the first set (Cave Images) -->
+        <img id="caveImage" src="images/cave_01.jpg" alt="Cave Image" onmouseover="changeImage('cave')">
+        <!-- Placeholder for the second set (Moon Images) -->
+        <img id="moonImage" src="images/moon_01.jpg" alt="Moon Image" onmouseover="changeImage('moon')">
+    </div>
+    <script>
+        var caveImages = ["images/cave_01.jpg", "images/cave_02.jpg"];
+        var moonImages = ["images/moon_01.jpg", "images/moon_02.jpg"];
+        var currentIndexCave = 0;
+        var currentIndexMoon = 0;
+
+        function changeImage(set) {
+            if (set === 'cave') {
+                currentIndexCave = (currentIndexCave + 1) % caveImages.length; // Loop through cave images
+                document.getElementById('caveImage').src = caveImages[currentIndexCave];
+            } else if (set === 'moon') {
+                currentIndexMoon = (currentIndexMoon + 1) % moonImages.length; // Loop through moon images
+                document.getElementById('moonImage').src = moonImages[currentIndexMoon];
+            }
+        }
+    </script>
+</body>
+</html>
