@@ -1,0 +1,62 @@
+<!-- Somsak Bounchareune: Assignment 11.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        let itemsArray = [];
+
+        function addItem() {
+            const item = document.getElementById('itemInput').value;
+            if (item) {
+                itemsArray.push(item);
+                alert(`Item added: ${item} at position ${itemsArray.length}`);
+                document.getElementById('itemInput').value = ''; // Clear the input box after adding
+            } else {
+                alert('Please enter a value to add');
+            }
+        }
+
+        function deleteItem() {
+            const index = document.getElementById('deleteIndexInput').value - 1; // Adjust for zero-based indexing
+            if (index >= 0 && index < itemsArray.length) {
+                const removedItem = itemsArray.splice(index, 1);
+                alert(`Deleted item: ${removedItem}`);
+                document.getElementById('deleteIndexInput').value = ''; // Clear the input box after deleting
+            } else {
+                alert('Invalid index. Please enter a valid item number.');
+            }
+        }
+
+        function displayItems() {
+            if (itemsArray.length > 0) {
+                let displayText = 'Items in the array:\n';
+                itemsArray.forEach((item, index) => {
+                    displayText += `${index + 1}. ${item}\n`;
+                });
+                alert(displayText);
+            } else {
+                alert('No items to display');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <h3>This is an interactive To Do List. Type in your first item in the text block, then click Add. Click the Display button to see current items in the list. Type the item number you wish to delete in the second text block and click Delete to remove an entry. No pressure.</h3>
+    <input type="text" id="itemInput" placeholder="Enter item here">
+    <button onclick="addItem()">Add</button>
+    <input type="number" id="deleteIndexInput" placeholder="Enter item number to delete">
+    <button onclick="deleteItem()">Delete</button>
+    <button onclick="displayItems()">Display</button>
+</body>
+</html>
+
+
