@@ -1,0 +1,81 @@
+<!-- Somsak Bounchareune: Assignment 12.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="bounchareune_Mod12_2.css">
+    <script>
+        // JavaScript array of book titles
+        const books = [
+            "Siddhartha",
+            "Of Human Bondage",
+            "The Sword of Shannara",
+            "Misery",
+            "A Spell for Chameleon",
+            "Hitchhiker's Guide to the Galaxy",
+            "A Clockwork Orange",
+            "Johnny Got His Gun",
+            "The Princess Bride",
+            "Lord of the Flies"
+        ];
+
+        // Function to display books in ascending order
+        function displayAsc() {
+            const sortedBooks = books.sort();
+            renderBooks(sortedBooks);
+        }
+
+        // Function to display books in descending order
+        function displayDesc() {
+            const sortedBooks = [...books].sort().reverse(); // Copy array to prevent reversing the original array
+            renderBooks(sortedBooks);
+        }
+
+        // Function to render books in an ordered list
+        function renderBooks(sortedBooks) {
+            const booksList = document.getElementById('booksList');
+            booksList.innerHTML = ''; // Clear existing content
+            const ol = document.createElement('ol');
+            sortedBooks.forEach(book => {
+                const li = document.createElement('li');
+                li.textContent = book;
+                ol.appendChild(li);
+            });
+            booksList.appendChild(ol);
+        }
+		
+		// Display the list in its initial state as soon as the page loads
+		window.onload = function(){
+		    displayAsc(); 
+		}
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div class="side-by-side" id="left-div">
+            <h3>Top 10 Favorite Books</h3>
+            <div id="booksList"><!-- The books will be displayed here --></div>
+            <button onclick="displayAsc()">Top to Bottom</button>
+            <button onclick="displayDesc()">Bottom to Top</button>
+        </div>
+        <div class="side-by-side" id="right-div">
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+            <ul>
+                <li>Creating a web page</li>
+                <li>The psychology of web design</li>
+                <li>Different functionality of GitHub</li>
+                <li>No matter what - I have terrible time management skills</li>
+                <li>The value of notes when writing code</li>
+            </ul>
+        </div>
+        <div class="back-link">
+            <a href="https://tasonoff.github.io/csd-340/">Back to Landing/Portal Page</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
